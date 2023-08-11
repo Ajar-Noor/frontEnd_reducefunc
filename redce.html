@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var playerA = [{ red: 3, blue: 5, green: 1 }]
+        var playerB = [{ red: 2, yellow: 3, blue: 4 }]
+
+        const totalBalls = [{
+            red: playerA.map(item => item.red).concat(playerB.map(item => item.red)).reduce((accum, curr) => accum + curr),
+            blue: playerA.map(item => item.blue).concat(playerB.map(item => item.blue)).reduce((accum, curr) => accum + curr),
+            yellow: playerA.map(item => item.yellow).concat(playerB.map(item => item.yellow)).reduce((accum, curr) => accum + curr),
+            green: playerA.map(item => item.green).concat(playerB.map(item => item.green)).reduce((accum, curr) => accum + curr)
+        }]
+        console.log(totalBalls)
+    </script>
+</body>
+
+</html>
