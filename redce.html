@@ -9,8 +9,8 @@
 
 <body>
     <script>
-        var playerA = [{ red: 3, blue: 5, green: 1 }]
-        var playerB = [{ red: 2, yellow: 3, blue: 4 }]
+        var playerA = [{ red: 3, blue: 5, green: 1, yellow: 0 }]
+        var playerB = [{ red: 2, yellow: 3, blue: 4, green: 0 }]
 
         const totalBalls = [{
             red: playerA.map(item => item.red).concat(playerB.map(item => item.red)).reduce((accum, curr) => accum + curr),
